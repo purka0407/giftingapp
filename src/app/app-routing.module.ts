@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WithbarcodeComponent } from './barcode/withbarcode/withbarcode.component';
-import { WithoutbarcodeComponent } from './barcode/withoutbarcode/withoutbarcode.component';
+
 
 const routes: Routes = [
-  {path: "", component:WithbarcodeComponent},
-  {path: "withoutbarcode", component:WithoutbarcodeComponent}
+  {
+    path: '',
+    loadChildren: () => import('./barcode/withbarcode/withbarcode.module').then(m => m.WithbarcodeModule)
+  },
+  {
+    path: 'withoutbarcode',
+    loadChildren: () => import('./barcode/withoutbarcode/withoutbarcode.module').then(m => m.WithoutbarcodeModule)
+  },
 ];
 
 @NgModule({
