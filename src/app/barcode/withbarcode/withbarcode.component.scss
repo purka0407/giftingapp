@@ -1,0 +1,57 @@
+button:hover{
+    background-color: rgb(238, 232, 232);
+ }
+ .navbar-brand{
+    
+    font-weight: 700;
+    
+    color: #b1b8c0;
+ }
+
+
+.date {
+    color: rgb(177, 184, 192);
+}
+p {
+    margin-bottom: 1rem;
+    margin-top: 0px;
+}
+h2 {
+    font-size: 22px;
+    color: rgb(29, 48, 102);
+}.btn.btn-read {
+    background: rgb(148, 86, 255);
+    color: rgb(255, 255, 255);
+    
+    
+}
+.btn {
+    border: none;
+    margin-bottom: 16px;
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    padding: 16px;
+    opacity: 0.9;
+    transition: 0.15s ease-in-out;
+}
+.btn:hover {opacity: 1}
+
+.accordion-button:focus {
+    z-index: 3;
+    border-color: white;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+.accordion-button:not(.collapsed) {
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+
+    
+    
+    
+
+
+
