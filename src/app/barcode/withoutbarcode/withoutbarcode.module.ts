@@ -8,7 +8,7 @@ import { WithoutbarcodeRoutingModule } from './withoutbarcode-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    WithoutbarcodeRoutingModule
+    WithoutbarcodeRoutingModule 
   ]
 })
 export class WithoutbarcodeModule { }
