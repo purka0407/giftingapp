@@ -8,7 +8,7 @@ import { map,retry,catchError } from 'rxjs/operators';
 })
 export class WebService {
 
-  constructor(public httpclient: HttpClient) { }
+  constructor(private httpclient: HttpClient) { }
   getdata():Observable<any>{
     return this.httpclient.get('https://reqres.in/api/products/3').pipe(
       map(res => {
@@ -17,12 +17,12 @@ export class WebService {
       retry(1),
       );
   }
-  getpostdata(data:any):Observable<any>{
-    return this.httpclient.post('https://reqres.in/api/products/3',data).pipe(
-      map(res => {
-          return res;
-      }),
-      retry(1),
-      );
-  }
+  // getpostdata(data:any):Observable<any>{
+  //   return this.httpclient.post('https://reqres.in/api/products/3',data).pipe(
+  //     map(res => {
+  //         return res;
+  //     }),
+  //     retry(1),
+  //     );
+  // }
 }

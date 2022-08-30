@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WebService } from 'src/app/shared/web.service';
 
 @Component({
   selector: 'app-withoutbarcode',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./withoutbarcode.component.scss']
 })
 export class WithoutbarcodeComponent implements OnInit {
-
-  constructor() { }
+  public currentdata:any=[];
+  constructor(public WebService: WebService) { }
 
   ngOnInit(): void {
+    let d =this.WebService.getdata().subscribe((res) => {
+      // console.log(res);
+      this.currentdata = res.data;
+      console.log(this.currentdata);
+    });
   }
 
 }
