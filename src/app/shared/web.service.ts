@@ -10,7 +10,7 @@ export class WebService {
 
   constructor(private httpclient: HttpClient) { }
   getdata():Observable<any>{
-    return this.httpclient.get('https://reqres.in/api/products/3').pipe(
+    return this.httpclient.get('https://reqres.in/api/products').pipe(
       map(res => {
           return res;
       }),

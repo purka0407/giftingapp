@@ -7,12 +7,12 @@ import { WebService } from 'src/app/shared/web.service';
   styleUrls: ['./withbarcode.component.scss'],
 })
 export class WithbarcodeComponent implements OnInit {
-  public currentdata:any=[];
+  currentdata:any=[];
   constructor(private WebService: WebService) {}
 
   ngOnInit(): void {
     let d =this.WebService.getdata().subscribe((res) => {
-      // console.log(res);
+      console.log(this.currentdata);
       this.currentdata = res.data;
       console.log(this.currentdata);
     });
